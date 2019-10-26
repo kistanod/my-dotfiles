@@ -1,0 +1,4 @@
+alias fishconfig="nvim ~/.config/fish/config.fish"
+alias nv="nvim"
+alias rm="trash"
+alias nvconfig="nvim ~/.config/nvim/init.vim"
