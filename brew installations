@@ -5,3 +5,4 @@ brew install youtube-dl
 brew install python3
 brew install neovim
 brew install trash
+brew install fish
