@@ -1,0 +1,4 @@
+network.trr.mode = 2
+network.trr.uri = https://mozilla.cloudflare-dns.com/dns-query
+network.trr.bootstrapAddress = 1.1.1.1
+network.security.esni.enabled = true
