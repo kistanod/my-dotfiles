@@ -1,8 +1,0 @@
-brew install cask
-brew install htop
-brew install speedtest-cli
-brew install youtube-dl
-brew install pyenv
-brew install neovim
-brew install trash
-brew install fish
