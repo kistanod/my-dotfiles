@@ -1,10 +1,10 @@
 #!/bin/sh
 
-" install the Homebrew
+# install the Homebrew
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-" Fetch latest version of homebrew and formula
+# Fetch latest version of homebrew and formula
 
 brew update
 
