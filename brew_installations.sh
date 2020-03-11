@@ -36,11 +36,9 @@ brew cask install alfred
 brew cask install bartender
 brew cask install keka
 brew cask install zoom
+brew cask install spectacle
 
 # all of the apps i can install from cask
 
-mas lucky things
-mas lucky twitter
-
-NOT DONE YET
+mas lucky things # install things3
 
