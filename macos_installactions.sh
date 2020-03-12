@@ -20,6 +20,7 @@ brew install trash # automatic trashing instead of rm
 brew install fish # my favourite shell
 brew install mas # cli-appstore
 brew install tmux # leave commands running in the background 
+brew install tldr # tldr man pages, very friendly
 
 # all of the install apps that i can install from cask
 
