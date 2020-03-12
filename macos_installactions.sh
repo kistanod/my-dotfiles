@@ -42,6 +42,7 @@ brew cask install pycharm
 brew cask install intellij-idea
 brew cask install visual-studio-code
 brew cask install coderunner
+brew cask install jgrasp
 
 # install all the extra stuff
 brew cask install iTerm2
@@ -59,6 +60,7 @@ brew cask install protonmail-bridge
 brew cask install protonvpn
 brew cask install cold-turkey-blocker
 brew cask install vlc
+brew cask install java
 
 # all of the apps i can install from cask
 
