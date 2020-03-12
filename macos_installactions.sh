@@ -30,6 +30,7 @@ brew cask install slack
 brew cask install signal
 brew cask install telegram
 brew cask install viber
+brew cask install whatsapp
 
 # install all browsers
 brew cask install firefox
@@ -40,6 +41,7 @@ brew cask install brave-browser
 brew cask install pycharm
 brew cask install intellij-idea
 brew cask install visual-studio-code
+brew cask install coderunner
 
 # install all the extra stuff
 brew cask install iTerm2
@@ -55,6 +57,8 @@ brew cask install spectacle
 brew cask install wireshark
 brew cask install protonmail-bridge
 brew cask install protonvpn
+brew cask install cold-turkey-blocker
+brew cask install vlc
 
 # all of the apps i can install from cask
 
