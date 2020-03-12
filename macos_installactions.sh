@@ -24,11 +24,25 @@ brew install tldr # tldr man pages, very friendly
 
 # all of the install apps that i can install from cask
 
+# install all the damn chats
 brew cask install discord
-brew cask install iTerm2
 brew cask install slack 
-brew cask install visual-studio-code
+brew cask install signal
+brew cask install telegram
+brew cask install viber
+
+# install all browsers
 brew cask install firefox
+brew cask install google-chrome
+brew cask install brave-browser
+
+# install code-editors
+brew cask install pycharm
+brew cask install intellij-idea
+brew cask install visual-studio-code
+
+# install all the extra stuff
+brew cask install iTerm2
 brew cask install dropbox
 brew cask install 1password
 brew cask install appcleaner
@@ -38,8 +52,12 @@ brew cask install bartender
 brew cask install keka
 brew cask install zoom
 brew cask install spectacle
+brew cask install wireshark
+brew cask install protonmail-bridge
+brew cask install protonvpn
 
 # all of the apps i can install from cask
 
 mas lucky things # install things3
-
+mas lucky "Encrypto: Secure"
+mas lucky "Be Focused Pro"
