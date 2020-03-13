@@ -36,6 +36,7 @@ brew cask install whatsapp
 brew cask install firefox
 brew cask install google-chrome
 brew cask install brave-browser
+brew cask install tor-browser
 
 # install code-editors
 brew cask install pycharm
@@ -53,7 +54,6 @@ brew cask install skype
 brew cask install alfred
 brew cask install bartender
 brew cask install keka
-brew cask install zoom
 brew cask install spectacle
 brew cask install wireshark
 brew cask install protonmail-bridge
