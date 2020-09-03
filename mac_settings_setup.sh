@@ -15,6 +15,10 @@ killall Dock 2> /dev/null
 
 #FINDER
 defaults write com.apple.finder AppleShowAllFiles -bool YES # hide files from desktop always
+defaults write com.apple.finder ShowStatusBar -bool YES
+defaults write com.apple.finder QuitMenuItem -bool YES
+defaults write com.apple.finder ShowPathbar -bool YES
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool NO
 killall Finder 2> /dev/null
 
 # increase the update frequency
