@@ -33,5 +33,5 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 #TOP BAR
 defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm:ss"
 defaults write com.apple.menuextra.battery ShowPercent -bool YES # Show percentage in battery menu extra
-defaults write com.apple.screencapture location '/Users/kistanod/Library/Mobile Documents/com~apple~CloudDocs/Daniil Kistanov/Screenshots'
+defaults write com.apple.screencapture location '/Users/kistanod/Library/Mobile Documents/com~apple~CloudDocs/kistanod/screenshots'
 killall SystemUIServer 2> /dev/null
