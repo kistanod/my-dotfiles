@@ -7,6 +7,8 @@
 # Fetch latest version of homebrew and formula
 
 brew update
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
 
 # install all the necessary packages
 
@@ -21,6 +23,17 @@ brew install fish # my favourite shell
 brew install mas # cli-appstore
 brew install tmux # leave commands running in the background 
 brew install tldr # tldr man pages, very friendly
+brew install wifi-password # find out wi-fi password of the network you are in
+
+
+# install my tools
+brew cask install karabiner-elements
+brew cask install dash
+brew cask audit istat-menus
+brew cask install hex-fiend
+brew cask audit mactracker
+brew cask install balenaetcher
+
 
 # all of the install apps that i can install from cask
 

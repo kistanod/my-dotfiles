@@ -2,6 +2,11 @@
 
 # REMINDER: cmd+shift+period to show hidden files all the time
 
+# this is to turn on boot chime
+
+sudo nvram StartupMute=%00
+
+
 #DOCK
 defaults write com.apple.dock autohide-delay -float 0; #speed of the dock
 defaults write com.apple.dock autohide-time-modifier -float 0.5; # speed of the dock
