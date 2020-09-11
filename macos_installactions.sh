@@ -33,6 +33,7 @@ brew cask audit istat-menus
 brew cask install hex-fiend
 brew cask audit mactracker
 brew cask install balenaetcher
+brew install terminal-notifier
 
 
 # all of the install apps that i can install from cask
