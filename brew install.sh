@@ -1,18 +1,28 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-# install the Homebrew
 
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+
+# install the Homebrew and fetch latest version of homebrew and formula
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-# Fetch latest version of homebrew and formula
-
 brew update
+
+#install cask
+brew install cask
+
+
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
 
 # install all the necessary packages
 
-brew install cask
+
+brew install ffmpeg
 brew install htop # top with extras
 brew install speedtest-cli # so i don't have to google
 brew install youtube-dl # download youtube from commandline
@@ -58,6 +68,7 @@ brew cask install intellij-idea
 brew cask install visual-studio-code
 brew cask install coderunner
 brew cask install jgrasp
+brew cask install submile-text
 
 # install all the extra stuff
 brew cask install iTerm2
@@ -81,3 +92,5 @@ brew cask install java
 mas lucky things # install things3
 mas lucky "Encrypto: Secure"
 mas lucky "Be Focused Pro"
+mas lucky "DaisyDisk"
+mas lucky "Magnet"
