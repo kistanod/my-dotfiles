@@ -22,7 +22,7 @@ brew cask install font-fira-code
 # install all the necessary packages
 
 
-brew install ffmpeg
+brew install ffmpeg 
 brew install htop # top with extras
 brew install speedtest-cli # so i don't have to google
 brew install youtube-dl # download youtube from commandline

@@ -2,7 +2,7 @@
 # PYENV ALIAS
 #########################
 
-status --is-interactive; and source (pyenv init -|psub)
+if command -v pyenv 1>/dev/null 2>&1; then\n  pyenv init - | source fi
 
 
 #########################
@@ -27,7 +27,7 @@ alias cl="clear"
 alias ll="exa -l"
 alias la="exa -la"
 alias l="exa"
-alias hidden='exa -la | grep "^\."'
+alias hidden="exa -ld .?*"
 
 #########################
 # OTHER USEFUL ALIASES

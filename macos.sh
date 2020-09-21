@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+#SET A DEBUGGER
+set -x
 
 # Ask for the administrator password upfront
 sudo -v
@@ -60,50 +62,6 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 #TOP BAR
 defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm:ss"
 defaults write com.apple.menuextra.battery ShowPercent -bool YES # Show percentage in battery menu extra
-
-
-###############################################################################
-# Energy saving                                                               #
-###############################################################################
-
-# Enable lid wakeup
-sudo pmset -a lidwake 1
-
-# Restart automatically on power loss
-sudo pmset -a autorestart 1
-
-# Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
-
-# Sleep the display after 15 minutes
-sudo pmset -a displaysleep 15
-
-# Disable machine sleep while charging
-sudo pmset -c sleep 0
-
-# Set machine sleep to 5 minutes on battery
-sudo pmset -b sleep 5
-
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
-
-# Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
-
-# Hibernation mode
-# 0: Disable hibernation (speeds up entering sleep mode)
-# 3: Copy RAM to disk so the system state can still be restored in case of a
-#    power failure.
-sudo pmset -a hibernatemode 0
-
-# Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
-# Create a zero-byte file instead…
-sudo touch /private/var/vm/sleepimage
-# …and make sure it can’t be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
-
-
 
 
 ###############################################################################
@@ -176,7 +134,7 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+chflags nohidden ~/Library 
 
 # Show the /Volumes folder
 sudo chflags nohidden /Volumes
@@ -205,8 +163,8 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 ###############################################################################
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # be able to hold down the key
 defaults write -g ApplePressAndHoldEnabled -bool FALSE
@@ -234,7 +192,7 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 # Enable HiDPI display modes (requires restart)
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool truea
+sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 
 
@@ -278,6 +236,7 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Change default location saving
 defaults write com.apple.screencapture location '/Users/kistanod/Library/Mobile Documents/com~apple~CloudDocs/kistanod/screenshots'
 
+{ set +x; } 2>/dev/null
 
 for app in "Activity Monitor" \
 	"Address Book" \
