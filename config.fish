@@ -1,11 +1,4 @@
 #########################
-# PYENV ALIAS
-#########################
-
-if command -v pyenv 1>/dev/null 2>&1; then\n  pyenv init - | source fi
-
-
-#########################
 # ALIAS TO CONFIG FILES
 #########################
 alias aliasconfig="nvim ~/.config/fish/config.fish"

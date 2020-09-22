@@ -27,10 +27,6 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
-
-# Automatically quit printer app once the print jobs complete
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
-
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
@@ -40,9 +36,6 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
-# Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 # Disable automatic capitalization as it’s annoying when typing code
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
@@ -72,7 +65,7 @@ defaults write com.apple.menuextra.battery ShowPercent -bool YES # Show percenta
 defaults write com.apple.dock autohide-delay -float 0;
 
 # Increase the speed at which Dock hides itself
-defaults write com.apple.dock autohide-time-modifier -float 0.5;
+defaults write com.apple.dock autohide-time-modifier -float 0.1;
 
 # Disable recent applications on the Dock 
 defaults write com.apple.dock show-recents -bool NO 
@@ -126,10 +119,6 @@ defaults write NSGlobalDomain com.apple.springing.delay -float 0
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
-# Use list view in all Finder windows by default
-# Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
-
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
@@ -138,10 +127,6 @@ chflags nohidden ~/Library
 
 # Show the /Volumes folder
 sudo chflags nohidden /Volumes
-
-# Remove Dropbox’s green checkmark icons in Finder
-file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
-[ -e "${file}" ] && mv -f "${file}" "${file}.bak"
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
@@ -158,19 +143,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 
 
 
-###############################################################################
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
-###############################################################################
 
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 2
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
-
-# be able to hold down the key
-defaults write -g ApplePressAndHoldEnabled -bool FALSE
-
-# turn off autocorrect 
-defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 
 ###############################################################################
@@ -183,16 +156,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
-
-# Disable shadow in screenshots
-defaults write com.apple.screencapture disable-shadow -bool true
-
-# Enable subpixel font rendering on non-Apple LCDs
-# Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
-defaults write NSGlobalDomain AppleFontSmoothing -int 1
-
-# Enable HiDPI display modes (requires restart)
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 
 
@@ -208,21 +171,11 @@ defaults write com.apple.mail DisableSendAnimations -bool true
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
-# Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
-defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21a9"
-
 # Disable inline attachments (just show the icons)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # Disable automatic spell checking
 defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
-
-
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
-
-
 
 
 ###############################################################################
@@ -234,9 +187,14 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 
 # Change default location saving
-defaults write com.apple.screencapture location '/Users/kistanod/Library/Mobile Documents/com~apple~CloudDocs/kistanod/screenshots'
+defaults write com.apple.screencapture location '~/screenshots'
 
 { set +x; } 2>/dev/null
+
+
+###############################################################################
+# Kill affected applications                                                  #
+###############################################################################
 
 for app in "Activity Monitor" \
 	"Address Book" \

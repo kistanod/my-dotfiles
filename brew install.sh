@@ -39,9 +39,9 @@ brew install wifi-password # find out wi-fi password of the network you are in
 # install my tools
 brew cask install karabiner-elements
 brew cask install dash
-brew cask audit istat-menus
+brew cask install istat-menus
 brew cask install hex-fiend
-brew cask audit mactracker
+brew cask install mactracker
 brew cask install balenaetcher
 brew install terminal-notifier
 
