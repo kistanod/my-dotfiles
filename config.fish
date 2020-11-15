@@ -9,7 +9,6 @@ alias nvconfig="nvim ~/.config/nvim/init.vim"
 #########################
 
 alias nv="nvim"
-alias rm="trash"
 alias cl="clear"
 
 
