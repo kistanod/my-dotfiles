@@ -31,4 +31,3 @@ alias hidden="exa -ld .?*"
 #########################
 
 alias showpaths="printf \%s\\n $PATH"
-alias icloud="cd /Users/kistanov/Library/Mobile\ Documents/com~apple~CloudDocs/"
