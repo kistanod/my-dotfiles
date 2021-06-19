@@ -1,3 +1,8 @@
+########################
+# EXPORT CONFIG
+#########################
+export DO_NOT_TRACK=1
+
 #########################
 # ALIAS TO CONFIG FILES
 #########################
@@ -9,7 +14,6 @@ alias nvconfig="nvim ~/.config/nvim/init.vim"
 #########################
 
 alias nv="nvim"
-alias rm="trash"
 alias cl="clear"
 
 
@@ -27,3 +31,4 @@ alias hidden="exa -ld .?*"
 #########################
 
 alias showpaths="printf \%s\\n $PATH"
+alias icloud="cd /Users/kistanov/Library/Mobile\ Documents/com~apple~CloudDocs/"
