@@ -1,0 +1,12 @@
+Host katara
+	HostName 167.99.100.122
+	User kistanov
+	ForwardAgent yes
+Host athena
+	HostName athena.ecs.csus.edu
+	User kistanod
+	IdentityFile ~/.ssh/id_ed25519_2
+Host csc196k
+	HostName ec2-54-87-129-160.compute-1.amazonaws.com
+	User ec2-user
+	IdentityFile ~/.ssh/csc196k-instance.pem

@@ -1,0 +1,64 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+<<<<<<< HEAD
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+brew "cask"
+brew "exa"
+brew "exiftool"
+brew "ffmpeg"
+brew "fish"
+brew "gh"
+brew "htop"
+brew "imagemagick"
+brew "mas"
+brew "mysql"
+brew "ncdu"
+brew "neovim"
+brew "postgresql"
+brew "qpdf"
+brew "r"
+brew "speedtest-cli"
+brew "syncthing"
+brew "terminal-notifier"
+brew "tldr"
+brew "wifi-password"
+brew "youtube-dl"
+cask "1password"
+cask "alfred"
+cask "android-studio"
+cask "appcleaner"
+cask "bartender"
+cask "basictex"
+cask "cold-turkey-blocker"
+cask "db-browser-for-sqlite"
+cask "discord"
+cask "firefox"
+cask "font-fira-code"
+cask "istat-menus"
+cask "iterm2"
+cask "julia"
+cask "lunar"
+cask "pgadmin4"
+cask "protonmail-bridge"
+cask "protonvpn"
+cask "pycharm"
+cask "signal"
+cask "skype"
+cask "sublime-merge"
+cask "sublime-text"
+cask "telegram"
+cask "vlc"
+cask "zoom"
+mas "AdBlock", id: 1402042596
+mas "Be Focused", id: 973134470
+mas "Be Focused Pro", id: 961632517
+mas "DaisyDisk", id: 411643860
+mas "Encrypto", id: 935235287
+mas "Magnet", id: 441258766
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Things", id: 904280696
+mas "Xcode", id: 497799835
